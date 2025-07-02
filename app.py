@@ -4,10 +4,7 @@ from datetime import datetime
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # For frontend JS
-
-# Connect to MongoDB (local or Atlas)
-#client = MongoClient("mongodb://localhost:27017/")  # Replace with Atlas URI if needed\
+CORS(app)  
 client = MongoClient("mongodb+srv://hemagowda210502:UrYMZ7EVJknVLuIj@cluster0.4eb7stx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["github_events"]
 collection = db["events"]
